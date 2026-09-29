@@ -1,0 +1,1193 @@
+* {
+    padding: 0px;
+    ;
+    margin: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.overall {
+    min-height: 100vh;
+    width: 100%;
+    background-color: black;
+}
+
+/* ------------nav bar--------------- */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: fixed;
+    top: 10px;
+    width: 96%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 15px;
+    margin: 0px 15px;
+    z-index: 999;
+
+}
+
+.navbar>a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+
+}
+
+.menulist {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    transition: all 1s;
+}
+
+.menulist a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.contactbt {
+    padding: 5px 10px;
+    background-color: grey;
+    border-radius: 20px;
+    border: 0px;
+
+}
+
+#icon {
+    display: none;
+    font-size: 20px;
+    color: white;
+
+}
+
+.bars {
+    color: white;
+    display: none;
+}
+
+.inp {
+    display: none;
+}
+
+/* ----------------page 1----------------- */
+
+.page1 {
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+
+    align-items: end;
+}
+
+.bg-image {
+    position: absolute;
+    right: -270px;
+    top: 20%;
+    transform: rotateZ(135deg);
+
+}
+
+.bg-img {
+    height: 400px;
+    width: 400px;
+}
+
+.content-and-image {
+    min-height: 500px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+
+
+}
+
+.tbox {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tbox>h3 {
+    font-size: 30px;
+}
+
+.tbox>h1 {
+    font-size: 50px;
+}
+
+.tbox>p {
+    font-size: 20px;
+}
+
+.profile {
+    height: 500px;
+    width: 300px;
+}
+
+.profile2 {
+    display: none;
+}
+
+.contactbutton {
+    padding: 10px 20px;
+    background-color: aqua;
+    color: white;
+    width: 130px;
+    border-radius: 20px;
+    border: 0px;
+
+}
+
+.contactbutton p {
+    font-size: 15px;
+    font-weight: bold;
+    display: inline-block;
+    padding-right: 10px;
+}
+
+/* ----------page 2----------- */
+
+
+
+.page2 {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding: 0px 20px;
+    padding-top: 80px;
+
+}
+
+.aboutpage {
+    color: white;
+    font-size: 30px;
+    border-bottom: dashed white;
+    margin-bottom: 80px;
+}
+
+.animation-and-content-box {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+
+}
+
+.animationbox {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.animation1 {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    bottom: 100px;
+
+}
+
+.animation2 {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    top: 100px;
+}
+
+/* ---------cube rotate animation------------ */
+
+.cubebox {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    animation-name: cube;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform-style: preserve-3d;
+}
+
+.side {
+
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border: 1px solid white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.c {
+    min-height: 60px;
+    min-width: 60px;
+    border: 2px solid white;
+
+}
+
+@keyframes cube {
+    from {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+.back {
+    transform: rotateX(-180deg) translateZ(100px);
+}
+
+.front {
+    transform: rotateX(0deg) translateZ(100px);
+}
+
+/* -------------page 2 content box--------------- */
+
+.page2-contentbox {
+    color: white;
+    width: 40%;
+}
+
+.nameanimation {
+    height: 80px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.nameanimation span {
+    display: inline-block;
+}
+
+.nameanimation .sp1 {
+    position: relative;
+    animation-name: name;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+@keyframes name {
+    0% {
+        top: 10px;
+        transform: scale(1);
+    }
+
+    50% {
+        top: 0px;
+        transform: scale(1.2);
+
+    }
+
+    100% {
+        top: 10px;
+        transform: scale(1);
+
+
+    }
+
+}
+
+.nameanimation .sp2 {
+    position: relative;
+    animation-name: name2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+@keyframes name2 {
+    0% {
+        top: 20px;
+        transform: scale(1.1);
+    }
+
+    50% {
+        top: 0px;
+        transform: scale(1);
+
+    }
+
+    100% {
+        top: 20px;
+        transform: scale(1.1);
+
+    }
+
+}
+
+.quotes {
+
+    font-size: 30px;
+}
+
+/* ----------------------page 3--------------------- */
+
+.page3 {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+    color: white;
+}
+
+.skillspage {
+    color: white;
+    margin-top: 80px;
+}
+
+.skillspage h1 {
+    border-bottom: dashed white;
+}
+
+.skillboxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    padding: 0px 20px;
+    padding-bottom: 30px;
+}
+
+.mainskillbox {
+    position: relative;
+    margin-bottom: 10%;
+}
+
+.cards {
+    height: 350px;
+    width: 250px;
+    border: 3px solid white;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.noms {
+    position: absolute;
+    font-size: 150px;
+    height: 0px;
+    /* padding:0px 0px; */
+    -webkit-text-stroke: 2px white;
+    background-color: black;
+    color: transparent;
+    top: 25%;
+    left: -40px;
+    z-index: 4;
+}
+
+.nomsbackblack {
+    height: 120px;
+    width: 10px;
+    background-color: black;
+    position: absolute;
+    z-index: 2;
+    left: -6px;
+    top: 30%;
+}
+
+.hoverbackground {
+    height: 500px;
+    width: 400px;
+    background-color: rgba(128, 128, 128, 0.315);
+    position: absolute;
+    z-index: 1;
+    animation-name: hov;
+    transition: all 1s;
+    top: -398px;
+    right: -291px;
+    border-bottom-left-radius: 200px;
+}
+
+.mainskillbox:hover .hoverbackground {
+    top: 0px;
+    right: 0px;
+}
+
+.cards>button:hover {
+    background-color: violet;
+
+    transition: all 1s;
+}
+
+
+
+.html {
+    height: 80px;
+    width: 80px;
+    position: relative;
+    z-index: 9;
+}
+
+.cards>button {
+    padding: 15px 45px;
+    border-radius: 30px;
+    background-color: rgb(94, 94, 216);
+    border: 0px;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    position: relative;
+    z-index: 10;
+    transition: all 2s;
+}
+
+.ball {
+    padding-left: 20px;
+}
+
+
+/* -----------------page 4--------------------- */
+
+.page4 {
+    min-height: 100vh;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 30px;
+    contain: paint;
+    
+}
+
+.box1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+   transition: all 1s;
+    min-height:450px;
+    flex-wrap: wrap;
+}
+.page4animationmain{
+   transition: all 1s;
+    animation-name: boxb;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: entry 20% cover 40%;
+}
+@keyframes boxb {
+    0% {
+    opacity: 1;
+    transform: translate(-300%);
+}
+100% {
+    opacity: 1;
+    transform: translate(-3%);
+}
+    
+}
+
+.page4animation {
+    height: 250px;
+    width: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    transition: all 1s;
+    
+}
+.page4animation:hover {
+    height:400px;
+    transition: all 1s;
+    
+    
+}
+
+.inbox1 {
+    height: 250px;
+    width: 350px;
+    position: absolute;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: path("M 10,0 L 340,30 A 20,20 0,0,1 350,40 L 350,170 A 20,20 0,0,1 340,180 L 10,250 A 20,20 0,0,1 0,240 L 0,10 A 20,20 0,0,1 10,0 Z");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    bottom: -5px;
+    transition:all 1s;
+    
+    
+}
+
+
+.inbox2 {
+    height: 250px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: rgba(5, 1, 20, 0.856);
+    clip-path: path("M 10,0 L 340,30 A 20,20 0,0,1 350,40 L 350,170 A 20,20 0,0,1 340,180 L 10,250 A 20,20 0,0,1 0,240 L 0,10 A 20,20 0,0,1 10,0 Z");  
+    left:0px;
+    top:-10px;
+    transition:all 1s;  
+    
+}
+
+.inbox1>img{
+    height:100%;
+    width:100%;
+}
+
+.page4animation:hover .inbox2{
+    background-color:rgba(128, 128, 128, 0.527);   
+}
+
+.page4text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    animation-name: boxa;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: entry 20% cover 40%;
+
+}
+
+@keyframes boxa {
+0% {
+    opacity: 1;
+    transform: translate(300%);
+}
+100% {
+    opacity: 1;
+    transform: translate(4%);
+}
+    
+}
+.page4text>h3{
+    font-size: 25px;
+}
+.page4text>p{
+    font-size: 20px;
+}
+.page4text>button{
+    font-size: 15px;
+    padding:10px 15px;
+    font-weight: 600;
+    border-radius: 10px;
+    border:0px;
+    width:130px;
+}
+
+/* -----------page 5-------------- */
+
+.page5{
+    min-height: 100vh;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 30px;
+    gap:80px;
+    
+}
+.education-main-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:80px;
+    flex-wrap: wrap;
+}
+.edu-box1{
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+    align-items: center;
+}
+
+.roundbox{
+    height:200px;
+    width:200px;
+    background-color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: relative;
+}
+.black-round-box{
+    height:150px;
+    width:150px;
+    background-color:black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.blackbox{
+    position: absolute;
+    background-color:black;
+    /* z-index: 15; */
+    height:100px;
+    width:100px;
+    top:-23px;
+    right:0px;
+}
+.blackbox2{
+    top:130px;
+    right:0px;
+}
+.blackbox3{
+    width:50px;
+    top:50px;
+    right:-4px;  
+}
+
+.blackbox3-2{
+    height:20px;
+    width:50px;
+    top:35px;
+    right:-3px;
+    transform: rotateZ(150deg);  
+}
+.blackbox3-3 {
+    height: 60px;
+    width: 50px;
+    top: 52px;
+    right: -3px;
+    transform: rotateZ(162deg);
+}
+
+.cl{
+    border-bottom:2px solid rgb(168, 241, 241);
+}
+
+
+
+
+/* -------------page 6----------------- */
+
+
+
+
+.page6{
+    min-height: 100vh;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 30px;
+    gap:80px;
+}
+
+.page6contentbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:80px;
+    flex-wrap: wrap;
+}
+
+.con-box{
+    height:250px;
+    width:250px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+}
+.con-box-in{
+    height:140px;
+    width:140px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:15px;
+}
+
+.img1{
+    height:40px;
+    width:40px;
+}
+.img2{
+    height:30px;
+    width:80px;
+}
+
+/* -----------round-1----------- */
+.con-box:hover{
+    transform: scale(1.1);
+}
+
+.con-box1{
+    background-image: linear-gradient(180deg, black, black, rgb(0, 124, 128));
+}
+
+.con-box-in1{
+    background-image: linear-gradient(180deg, black, black, rgb(0, 124, 128));
+}
+/* ----------round-2------------ */
+.con-box2{
+    background-image: linear-gradient(180deg, black, black, purple);
+}
+
+.con-box-in2{
+    background-image: linear-gradient(180deg, black, black, purple);
+}
+
+/* ----------round-3------------ */
+
+.con-box3{
+    background-image: linear-gradient(180deg, black, black, rgb(245, 120, 48));
+}
+
+.con-box-in3{
+    background-image: linear-gradient(180deg, black, black, rgb(245, 120, 48));
+}
+
+/* ----------round-4------------ */
+
+.con-box4{
+    background-image: linear-gradient(180deg, black, black, rgb(40, 236, 105));
+}
+
+.con-box-in4{
+    background-image: linear-gradient(180deg, black, black, rgb(40, 236, 105));
+}
+
+/* ----------round-5------------ */
+
+.con-box5{
+    background-image: linear-gradient(180deg, black, black, rgb(218, 208, 79));
+}
+
+.con-box-in5{
+    background-image: linear-gradient(180deg, black, black, rgb(218, 208, 79));
+}
+
+/* ----------round-6------------ */
+
+.con-box6{
+    background-image: linear-gradient(180deg, black, black, rgb(107, 48, 245));
+}
+
+.con-box-in6{
+    background-image: linear-gradient(180deg, black, black, rgb(107, 48, 245));
+}
+
+/* ----------------- round hower effects-------------------- */
+/* ----------round-1----------- */
+.con-box1:hover{
+    background-image: linear-gradient(180deg, black, rgb(0, 124, 128));
+}
+
+.con-box1:hover .con-box-in1{
+    background-image: linear-gradient(180deg, black, rgb(0, 124, 128));
+}
+/* ----------round-2------------ */
+.con-box2:hover{
+    background-image: linear-gradient(180deg, black, purple);
+}
+
+.con-box2:hover .con-box-in2{
+    background-image: linear-gradient(180deg, black, purple);
+}
+
+/* ----------round-3------------ */
+
+.con-box3:hover{
+    background-image: linear-gradient(180deg, black, rgb(245, 120, 48));
+}
+
+.con-box3:hover .con-box-in3{
+    background-image: linear-gradient(180deg, black, rgb(245, 120, 48));
+}
+
+/* ----------round-4------------ */
+
+.con-box4:hover{
+    background-image: linear-gradient(180deg, black, rgb(40, 236, 105));
+}
+
+.con-box4:hover .con-box-in4{
+    background-image: linear-gradient(180deg, black, rgb(40, 236, 105));
+}
+
+/* ----------round-5------------ */
+
+.con-box5:hover{
+    background-image: linear-gradient(180deg, black, rgb(218, 208, 79));
+}
+
+.con-box5:hover .con-box-in5{
+    background-image: linear-gradient(180deg, black, rgb(218, 208, 79));
+}
+
+/* ----------round-6------------ */
+
+.con-box6:hover{
+    background-image: linear-gradient(180deg, black, rgb(107, 48, 245));
+}
+
+.con-box6:hover .con-box-in6{
+    background-image: linear-gradient(180deg, black, rgb(107, 48, 245));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width:650px) and (max-width:900px) {
+
+    /* -----------nav bar---------- */
+    #icon {
+        display: inline-block;
+
+    }
+
+    .contact {
+        display: none;
+
+    }
+
+    /* --------page 1-------- */
+
+    .profile {
+        display: none;
+    }
+
+    .profile2 {
+        display: inline-block;
+    }
+
+    .bg-image {
+        display: none;
+    }
+
+    .content-and-image {
+        min-height: 500px;
+        width: 100%;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: unset;
+        z-index: 1;
+        padding-top: 80px;
+        padding-bottom: 20px;
+    }
+
+    .tbox {
+        width: 80%;
+        align-items: center;
+    }
+
+    /* ------------page 2------------- */
+
+    .animation-and-content-box {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 100px;
+        padding-bottom: 20px;
+
+    }
+
+    .animationbox {
+        width: 100%;
+    }
+
+    .page2-contentbox {
+        color: white;
+        width: 80%;
+        text-align: center;
+    }
+
+    /* -----------------------page 3----------------------- */
+
+
+
+
+
+    /* --------------------------page 4 ------------------------------ */
+
+    .page4-animation-and-contentboxes{
+        padding:10px 20px;
+    }
+    .box1{
+        flex-direction: column;
+        align-items: center;
+        
+       
+    }
+    .page4animationmain{
+        width:100%;
+        height:500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+    }
+    .page4text{
+        width:90%;
+    }
+/* -----------page 5-------------- */
+
+
+}
+
+
+
+
+
+
+
+
+@media only screen and (min-width:300px) and (max-width:650px) {
+    /* ---------------nav bar-------------- */
+
+    .menulist {
+        padding: 15px 60px;
+        position: absolute;
+        flex-direction: column;
+
+        right: 10%;
+        background-color: rgba(128, 128, 128, 0.342);
+        border-radius: 20px;
+        transform: scale(0);
+        opacity: 0;
+        top: -60px;
+
+
+
+    }
+
+    .bars {
+        color: white;
+        display: inline-block;
+    }
+
+    .inp:checked+.menulist {
+        transform: scale(1);
+        opacity: 1;
+        top: 80px;
+
+    }
+
+    /* ---------------page 1----------------- */
+
+    .profile {
+        display: none;
+    }
+
+    .profile2 {
+        display: inline-block;
+    }
+
+    .bg-image {
+        display: none;
+    }
+
+    .profile {
+        display: none;
+    }
+
+    .profile2 {
+        display: inline-block;
+    }
+
+    .bg-image {
+        display: none;
+    }
+
+    .content-and-image {
+        min-height: 500px;
+        width: 100%;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: unset;
+        z-index: 1;
+        padding-top: 80px;
+        padding-bottom: 20px;
+    }
+
+    .tbox {
+        width: 80%;
+        align-items: center;
+    }
+
+
+
+    /* ---------------page 2----------------- */
+
+    .animation-and-content-box {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 100px;
+        padding-bottom: 20px;
+
+    }
+
+    .animationbox {
+        width: 100%;
+
+
+    }
+
+    .page2-contentbox {
+        color: white;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* ----------------------page 3--------------------- */
+
+    /* ---------------------page 4 ------------------------ */
+    .page4-animation-and-contentboxes{
+        padding:10px 20px;
+    }
+    .box1{
+        flex-direction: column;
+        align-items: center;
+       
+    }
+    .page4animationmain{
+        min-height:500px;
+        display: flex;
+        align-items: center;
+    }
+    .page4animation {
+    height: 245px;
+    width: 371px;
+}
+    .page4text{
+        width:100%;
+    }
+    .inbox1{
+        transform: scale(0.9);
+    }
+    .inbox2{
+       transform: scale(0.9);
+
+    }
+
+
+/* -----------page 5-------------- */
+
+
+}
+
+@media only screen and (min-width:300px) and (max-width:450px) {
+    .animation1 {
+        display: none;
+
+    }
+
+    .animation2 {
+        display: none;
+
+    }
+
+    .animationbox {
+        justify-content: center;
+
+    }
+
+    .nameanimation {
+        font-size: 27px;
+        margin-bottom: 20px;
+    }
+
+    /* --------------------page 3--------------------- */
+    
+    /* -------------------page 4---------------------------------- */
+
+   
+    
+    .box1{
+        flex-direction: column;
+        align-items: center;
+       
+    }
+    .page4animationmain{
+        height:500px;
+        display: flex;
+        align-items: center;
+    }
+    .page4animation {
+    height: 245px;
+    width: 330px;
+}
+    .page4text{
+        width:90%;
+    }
+    
+     .inbox1{
+        transform: scale(0.8);
+    }
+    .inbox2{
+       transform: scale(0.8);
+
+    }
+
+/* -----------page 5-------------- */    
+
+}
